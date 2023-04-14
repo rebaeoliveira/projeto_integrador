@@ -16,4 +16,6 @@ Se esse animal for encontrado pode-se acessar o site e reconhecer pela foto do a
 Esse QR code poderá ser impresso de forma gratuita pelo usuário em formato de uma moeda ou tag que permita ser plastificado e colocado junto a coleira do animal (o site apenas gerar o QRcode no formato - impressão e plastificação é responsabilidade do usuário).
 
 * Sugestão do professor de uma API que permita notificar no wats ou telegram se o animal perdido for encontrado.
+
+* Sugestão de nome para o projeto: Amigos dos pets.
   
