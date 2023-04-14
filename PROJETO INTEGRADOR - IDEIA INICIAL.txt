@@ -1,0 +1,19 @@
+SITE PARA DOAÇÃO e ADOÇÃO DE ANIMAIS / ANIMAIS PERDIDOS
+
+* Criação de um site que permita inserir anúncios de animais para doação.
+Esse anúncio deve conter os dados do doador (Nome, telefone, etc) e os dados do animal (Raça, nome, peso, idade, foto) 
+
+* O interessado para adoção também precisa de um cadastro para permitir contato com o anúncio do doador (exemplo OLX).
+
+* O site terá um menu que permite realizar o anúncio de animais perdidos (foto, nome, raça, local e data que foi perdido) e o contato do responsável.
+Se esse animal for encontrado pode-se acessar o site e reconhecer pela foto do anúncio e realizar contato com o responsável.
+ 
+* O site terá um menu de ONGs Sociais que tem por objetivo o cadastro de ongs (local, qual trabalho fazem, tipos de animais que cuidam, principais dificuldades, responsáveis, contatos).
+
+* Usuários podem realizar contato com as ONGs cadastradas para fazer doações (tempo, dinheiro, ração, veterinários, etc).
+
+* Será avaliado a possibilidade de criar um menu, onde o usuário pode gerar um QRcode com os dados de seu animal.
+Esse QR code poderá ser impresso de forma gratuita pelo usuário em formato de uma moeda ou tag que permita ser plastificado e colocado junto a coleira do animal (o site apenas gerar o QRcode no formato - impressão e plastificação é responsabilidade do usuário).
+
+* Sugestão do professor de uma API que permita notificar no wats ou telegram se o animal perdido for encontrado.
+  
