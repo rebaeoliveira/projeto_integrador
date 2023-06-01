@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;300;400;500;600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+.form-header{
+    align-items: center;
+}
+
+
+body{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    height: 100%;
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+}
+
+.img img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.form-image{
+    height: 100px;
+    width: 45%;
+}
+
+.form-image img{
+    width: 45rem;
+}
+
+
+.tudo{
+    margin: 90px auto;
+}
+
+.title{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.title > h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: yellow;
+    font-size: 55px;
+}
+
+.title > h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: darkslateblue;
+    font-size: 15px;
+}
+
+.title > h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: darkslateblue;
+    font-size: 22px;
+    padding: 20px;
+}
+
+.facebook-google{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+}
+
+.facebook{
+    height: 70px;
+    border: none;
+    padding: 0.4rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+}
+
+.facebook button{
+    border: none;
+    background-color: #0c03ab;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 40px;
+}
+
+.facebook button a{
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+}
+
+.google{
+    height: 70px;
+    border: none;
+    padding: 0.4rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+}
+
+.google button{
+    border: none;
+    background-color: rgb(16, 106, 242);
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 40px;
+}
+
+.google button a{
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+}
+
+.frase-formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: darkslateblue;
+    font-size: 22px;
+}
+
+.subtitulo{
+    display: grid;
+    padding: 23px;
+}
+
+.favorito{
+    padding: 23px;
+}
+
+.primeiro-segundo{
+    display: flex;
+    gap: 28px;
+}
+
+.terceiro-quarto{
+    display: flex;
+    gap: 22px;
+}
+
+.input-group{
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+
+.input-box input{
+    margin: 0.1rem 0;
+    padding: 0.8 1.2rem;
+    border: none;
+    border-radius: 1px;
+    box-shadow: 1px 1px 6px #0000001c;
+}
+
+.input-box input:hover{
+    background-color: #eeeeee75;
+}
+
+.input-box input:focus-visible{
+    outline: 1px solid #6c63ff;
+}
+
+.input-box label,
+.genter-title h6{
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+.gender-group{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.62rem;
+    padding: 0 0.5rem;
+}
+
+.gender-input{
+    display: flex;
+    align-items: center;
+}
+
+.gender-input input{
+    margin-right: 0.35rem;
+}
+
+.form-field{
+    display: grid;
+    margin-bottom: 1.1rem;
+}
+
+.form-field input{
+    margin: 0.1rem 0;
+    padding: 0.8 1.2rem;
+    border: none;
+    border-radius: 1px;
+    box-shadow: 1px 1px 6px #0000001c;
+}
+
+.form-field input:hover{
+    background-color: #eeeeee75;
+}
+
+.continue-button button{
+    width: 100%;
+    margin-top: 2.5rem;
+    border: none;
+    background-color: #6c63ff;
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.continue-button button:hover{
+    background-color: #6b63fff1;
+}
+
+.continue-button button a{
+    text-decoration: none;
+    font-size: 0.93rem;
+    font-weight: 500;
+    color: #fff;
+}
+

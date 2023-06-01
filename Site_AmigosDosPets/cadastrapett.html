@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./cadastrapett.css">
+    <title>cadastra pet</title>
+</head>
+<body>
+        <div class="inicio">
+            <div class="primeira-barra">
+                <div class="img">
+                    <img src="./image/Logo.png" alt="">
+                </div>
+                <span class="barra-logado">Login efetuado com sucesso</span>
+            </div>
+
+            <div class="barra-home">
+                <a class="primary-link" href="./home.html">Home</a>
+                / Cadastre um peludo para adoção
+            </div>
+
+
+                <div class="page-center">
+                    <div class="title">
+                        <h1>Cadastre um peludo para adoção</h1>
+                        <p>Primeiro vamos cadastrar as informações essenciais e obrigatórias (marcadas com *)</p>
+                    </div>
+
+                        <div class="linhas">
+                            <div class="area">
+                                    <div class="identificacao">
+                                        <span class="palavra-identificacao">Identificação</span>
+                                    </div>
+                            </div>
+                        </div>
+                        
+                    <div class="segunda-tela">    
+
+                        <div class="nome-bichinho">
+                            <label for="pet-form_name">Nome do bichino</label>
+                            <input id="pet-form_name" name="pet[name]" type="text" value="" required>
+                        </div>
+
+                        
+                        <div class="especie-sexo">
+                            <div id="especie">
+                                <legend class="especiee">Espécie*</legend>
+                                <select name="select" id="select">
+                                    <option disabled selected></option>
+                                    <option value="dog">Cachorro</option>
+                                    <option value="gat">Gato</option>
+                                </select>
+                            </div>     
+                        
+
+                            <div class="especie-sexo">
+                                <div id="Sexo">
+                                    <legend class="sexoo">Sexo*</legend>
+                                    <select name="select" id="select">
+                                        <option disabled selected></option>
+                                        <option value="macho">Macho</option>
+                                        <option value="femea">Fêmea</option>
+                                    </select>
+                                </div>     
+                            </div>
+                        </div>
+
+                        <div class="idade-porte">
+                            <div id="idade">
+                                <legend class="idadee">Idade*</legend>
+                                <select name="select" id="select">
+                                    <option disabled selected></option>
+                                    <option value="idoso">Idoso</option>
+                                    <option value="adulto">Adulto</option>
+                                    <option value="filhote">Filhote</option>
+                                </select>
+                            </div>     
+
+                            <div class="idade-porte">
+                                <div id="porte">
+                                    <legend class="portee">Porte*</legend>
+                                    <select name="select" id="select">
+                                        <option disabled selected></option>
+                                        <option value="">Porte pequeno</option>
+                                        <option value="">Porte médio</option>
+                                        <option value="">Porte grande</option>
+                                    </select>
+                                </div>     
+                            </div>
+                        </div>
+
+                        <div class="estado-cidade">
+                            <div id="estado">
+                                <legend class="estadoo">Estado*</legend>
+                                <select name="select" id="select">
+                                    <option disabled selected></option>
+                                    <option value="">Mato Grosso do Sul</option>
+                                    <option value="">Santa Catarina</option>
+                                </select>
+                            </div>     
+
+                            <div class="estado-cidade">
+                                <div id="cidade">
+                                    <legend class="cidadee">Cidade*</legend>
+                                    <select name="select" id="select">
+                                        <option disabled selected></option>
+                                        <option value="">Cascaveç</option>
+                                        <option value="">Santa Tereza do Oeste</option>
+                                        <option value="">Toledo</option>
+                                    </select>
+                                </div>     
+                            </div>
+                        </div>
+
+                        <div class="sobre-bicho">
+                            <label class="sobre-bichoo">Sobre o bicho</label>
+                            <textarea id="user_bio" name="user[bio]" rows="5"></textarea>
+                        </div>
+
+                        <div class="principal-completo">
+                            <div class="escolher-ficheiro-completo">
+                                <label for="pet-form_avatar">Foto principal*</label>
+                                <input accept=".png, .jpeg, .jpg" id="pet-form_avatar" name="pet[avatar]" type="file">
+                            </div>
+
+                            <div>
+                                <img class="imagem-link" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG5HSnndTlYYClgj_17jMhWUWrOdVDwKGnvQ&usqp=CAU" width="80px">
+                            </div>
+                        </div>
+
+                        <div class="barra-outras-informacoes">
+                            <div class="barra">
+                                <div class="linha"></div>
+                            </div>
+                            <div class="classe-informacoes">
+                                <span class="frase-outras-informacoes">Outras informações</span>
+                            </div>
+                        </div>
+
+                        <div class="tabela-pai">
+                            <label>Cuidados Veterinários</label>
+                            <div class="tabela">
+                                <div class="chk-chip">
+                                    <input name="pet-cadastrar" type="hidden" value="false">
+                                    <input id="pet-form-cadastrar" name="pet-cadastrar" type="checkbox" value="true">
+                                    <label for="pet-form-cadastrar">Castrado</label>
+                                </div>
+
+                                <div class="chk-chip">
+                                    <input name="pet-vacina" type="hidden" value="false">
+                                    <input id="pet-form-vacina" name="pet-vacina" type="checkbox" value="true">
+                                    <label for="pet-form-vacina">Vacinado</label>
+                                </div>
+
+                                <div class="chk-chip">
+                                    <input name="pet-vermifugado" type="hidden" value="false">
+                                    <input id="pet-form-vermifugado" name="pet-vermifugado" type="checkbox" value="true">
+                                    <label for="pet-form-vermifugado">Vermifugado</label>
+                                </div>
+
+                                <div class="chk-chip">
+                                    <input name="pet-cuidado-especiais" type="hidden" value="false">
+                                    <input id="pet-form-cuidado-especiais" name="pet-cuidado-especiais" type="checkbox" value="true">
+                                    <label for="pet-form-cuidado-especiais">Precisa de cuidados especiais</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tabela-pai">
+                            <label>Temperamento</label>
+                            <div class="tabela">
+                                <div class="chk-chip">
+                                    <input name="pet-docil" type="hidden" value="false">
+                                    <input id="pet-form-docil" name="pet-docil" type="checkbox" value="true">
+                                    <label for="pet-form-docil">Dócil</label>
+                                </div>
+
+                                <div class="chk-chip">
+                                    <input name="pet-agressivo" type="hidden" value="false">
+                                    <input id="pet-form-agressivo" name="pet-agressivo" type="checkbox" value="true">
+                                    <label for="pet-form-agressivo">Agressivo</label>
+                                </div>
+
+                                <div class="chk-chip">
+                                    <input name="pet-calmo" type="hidden" value="false">
+                                    <input id="pet-form-calmo" name="pet-calmo" type="checkbox" value="true">
+                                    <label for="pet-form-calmo">Calmo</label>
+                                </div>
+
+                                <div class="chk-chip">
+                                    <input name="pet-brincalhao" type="hidden" value="false">
+                                    <input id="pet-form-brincalhao" name="pet-brincalhao" type="checkbox" value="true">
+                                    <label for="pet-form-brincalhao">Brincalhão</label>
+                                </div>
+
+                                <div class="chk-chip">
+                                    <input name="pet-sociavel" type="hidden" value="false">
+                                    <input id="pet-form-sociavel" name="pet-sociavel" type="checkbox" value="true">
+                                    <label for="pet-form-sociavel">Sociável</label>
+                                </div>
+
+                                <div class="chk-chip">
+                                    <input name="pet-arisco" type="hidden" value="false">
+                                    <input id="pet-form-arisco" name="pet-arisco" type="checkbox" value="true">
+                                    <label for="pet-form-arisco">Arisco</label>
+                                </div>
+
+                                <div class="chk-chip">
+                                    <input name="pet-independente" type="hidden" value="false">
+                                    <input id="pet-form-independente" name="pet-independente" type="checkbox" value="true">
+                                    <label for="pet-form-independente">Independente</label>
+                                </div>
+
+                                <div class="chk-chip">
+                                    <input name="pet-carente" type="hidden" value="false">
+                                    <input id="pet-form-carente" name="pet-carente" type="checkbox" value="true">
+                                    <label for="pet-form-carente">Carente</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tabela-pai">
+                            <label>Vive bem com</label>
+                            <div class="tabela">
+                                <div class="chk-chip">
+                                    <input name="pet-casa-quintal" type="hidden" value="false">
+                                    <input id="pet-form-casa-quintal" name="pet-casa-quintal" type="checkbox" value="true">
+                                    <label for="pet-form-casa-quintal">Casa com quintal</label>
+                                </div>
+
+                                <div class="chk-chip">
+                                    <input name="pet-apartamento" type="hidden" value="false">
+                                    <input id="pet-form-apartamento" name="pet-apartamento" type="checkbox" value="true">
+                                    <label for="pet-form-apartamento">Apartamento</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tabela-pai">
+                            <label>Sociável com</label>
+                            <div class="tabela">
+                                <div class="chk-chip">
+                                    <input name="pet-gato" type="hidden" value="false">
+                                    <input id="pet-form-gato" name="pet-gato" type="checkbox" value="true">
+                                    <label for="pet-form-gato">Gatos</label>
+                                </div>
+
+                                <div class="chk-chip">
+                                    <input name="pet-desconhecido" type="hidden" value="false">
+                                    <input id="pet-form-desconhecido" name="pet-desconhecido" type="checkbox" value="true">
+                                    <label for="pet-form-desconhecido">Desconhecidos</label>
+                                </div>
+
+                                <div class="chk-chip">
+                                    <input name="pet-cachorro" type="hidden" value="false">
+                                    <input id="pet-form-cachorro" name="pet-cachorro" type="checkbox" value="true">
+                                    <label for="pet-form-cachorro">Cachorros</label>
+                                </div>
+
+                                <div class="chk-chip">
+                                    <input name="pet-crianca" type="hidden" value="false">
+                                    <input id="pet-form-crianca" name="pet-crianca" type="checkbox" value="true">
+                                    <label for="pet-form-crianca">Crianças</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="continue-button">
+                            <button><a href="#">Salvar</a></button>
+                        </div>
+                        
+                    </div>
+                </div>
+        </div>    
+</body>
+</html>
