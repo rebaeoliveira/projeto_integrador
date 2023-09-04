@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastrausuario.css">
+    <title>Formulário de cadastro</title>
+</head>
+
+<body>
+    <div class="tudo">
+        <div class="form">
+            <form action="#">
+                <div class="form-header">
+                    <div class="title">
+                        <div class="img">
+                            <img src="./image/Logo.png" alt="">
+                        </div>
+                        <h3>Novo usuário? Adicione suas informações</h3>
+                    </div>
+                    <div class="facebook-google">                        
+                        <div class="facebook">
+                            <button><a href="#">Entrar com o Facebook</a></button>
+                        </div>
+                        <div class="google">
+                            <button><a href="#">Entrar com o Google</a></button>
+                        </div>                    
+                    </div>
+                </div>
+
+                    <div class="frase-formulario">
+                        <p>Ou use o formulário abaixo</p>
+                    </div>
+
+                    <hr>
+
+        </div>
+                <div class="subtitulo">
+                    <label>Como podemos te ajudar?*</label>
+                    <small>Marque quantas opções quiser</small>
+                </div>
+                    
+
+
+                <div class="favorito">
+                    <div class="primeiro-segundo">
+                        <div>
+                            <label>
+                            <input name="user[want_divulge]" type="hidden" value="false"><input id="user_want_divulge" name="user[want_divulge]" type="checkbox" value="true">
+                            Quero divulgar bichinhos fofos para adoção
+                            </label>
+                        </div>
+        
+                        <div>
+                            <label>
+                            <input name="user[want_adopt]" type="hidden" value="false"><input id="user_want_adopt" name="user[want_adopt]" type="checkbox" value="true">
+                            Quero adotar um cachorro ou gato
+                            </label>
+                        </div>
+                    </div>
+                
+                    <div class="terceiro-quarto">
+                        <div>
+                            <label>
+                            <input name="user[want_news]" type="hidden" value="false"><input id="user_want_news" name="user[want_news]" type="checkbox" value="true">
+                            Quero receber dicas de cuidados com meu pet
+                            </label>
+                        </div>
+        
+                        <div>
+                            <label>
+                            <input name="user[want_club]" type="hidden" value="false"><input id="user_want_club" name="user[want_club]" type="checkbox" value="true">
+                            Quero fazer parte do <a href="https://site.amigosdopets.com.br/clube-amigos-dos-pets" class="primary-link" target="_blank">Clube Amigos dos Pets</a>
+                            </label>
+                        </div>
+                    </div>
+
+
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="firstname">Seu nome*</label>
+                        <input id="firstname" type="text" name="firstname" placeholder="" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="lastname">Apelido*</label>
+                        <input id="lastname" type="text" name="lastname" placeholder="" required>
+                        <small>Seu apelido vai se transformar no endereço da sua página no Amigo não se compra.</small>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="email">E-mail*</label>
+                        <input id="email" type="email" name="email" placeholder="" required>
+                        <small>Coloque um e-mail ativo, pois você irá receber as mensagens do protetor ou adotante através dele.</small>
+                        <small>Seu e-mail será exibido publicamente para que os interessados em adotar entrem em contato através dele.</small>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="email">Confirmação de e-mail*</label>
+                        <input id="email" type="email" name="email" placeholder="" required>
+                
+                    </div>
+
+                    <div class="input-box">
+                        <label for="number">Whatszapp*</label>
+                        <input id="number" type="tel" name="number" placeholder="" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label>
+                        <input name="user[is_public_phone1]" type="hidden" value="false"><input id="user_is_public_phone1" name="user[is_public_phone1]" type="checkbox" value="true"> Tornar o WhatsApp visível?
+                        </label>
+                        <small class="block">Marque seu número como visível publicamente para que os adotantes possam entrar em contato pelo Whatsapp!</small>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="user_phone2">WhatsApp secundário</label>
+                        <input autocomplete="phone" id="user_phone2" name="user[phone2]" type="text">
+                        <small>Preencha aqui caso haja um outro número para o adotante entrar em contato.</small>
+                        <span></span>
+                    </div>
+
+                    <div class="form-field">
+                        <label>
+                        <input name="user[is_public_phone2]" type="hidden" value="false"><input id="user_is_public_phone2" name="user[is_public_phone2]" type="checkbox" value="true"> Tornar o WhatsApp secundário visível?
+                        </label>
+                        <small class="block">Marque seu número como visível publicamente para que os adotantes possam entrar em contato pelo WhatsApp secundário também!</small>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row gap-4 mt-3" id="v-location">
+                        <div class="form-field flex-1">
+                        <label for="user_state_id">Estado*</label>
+                        <select id="user_state_id" name="user[state_id]" v-model="state_id" v-on:change="loadCities" v-init:state_id="&#39;&#39;">
+                        <option :value="null" disabled selected>Selecione o Estado</option>
+                                </option><option value="e959d023-713e-4ae1-880b-55b8d3071d74">
+                                Mato Grosso do Sul
+                                </option><option value="478b0962-26d0-4a5e-9420-4a5bc6bc6e44">
+                                Santa Catarina
+                        </option>
+                        </select>
+                        <span></span>
+                    </div>
+
+                    <div class="form-field flex-1">
+                        <label for="user_city_id">Cidade*</label>
+                        <select id="user_city_id" name="user[city_id]" v-model="city_id" v-init:city_id="&#39;&#39;">
+                        <option :value="null" disabled selected>Selecione a Cidade</option>
+                        <option value="42651b0f-2b2b-4a2c-a644-cd0effd7476d">Palhoça</option>
+                        <option value="a7d06319-d965-4b9e-a4d2-7f7f79c4751a">São Joaquim</option>
+                        <option value="69ed6f2d-bdc1-42de-b451-e034cb3898c4">São José</option>
+                        </select>
+                        <span></span>
+                    </div>
+
+                    </div>
+                    
+                    <div class="form-field">
+                        <label for="user_website">Site</label>
+                        <input id="user_website" name="user[website]" type="text">
+                        <small>Se você faz parte de uma ONG, pode divulgar seu site</small>
+                        <span></span>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="password">Senha</label>
+                        <input id="password" type="text" name="password" placeholder="" required>
+                        <small>Deve ter pelo menos 8 caracteres, incluindo letras e números.</small>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="Comfirmpassword">Confirme sua senha</label>
+                        <input id="Comfirmpassword" type="text" name="Comfirmpassword" placeholder="" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="user_bio">Sobre você</label>
+                        <textarea id="user_bio" name="user[bio]" rows="5"></textarea>
+                        <span></span>
+                    </div>
+
+                </div>
+
+                <div class="gender-inputs">
+                    <div class="gender-title">
+                        <h6>Gênero</h6>
+                    </div>
+
+                    <div class="gender-group">
+                        <div class="gender-input">
+                            <input type="radio" id="female" name="gender">
+                            <label for="female">Feminino</label>
+                        </div>
+
+                        <div class="gender-input">
+                            <input type="radio" id="male" name="gender">
+                            <label for="male">Masculino</label>
+                        </div>
+
+                        <div class="gender-input">
+                            <input type="radio" id="others" name="gender">
+                            <label for="others">Outros</label>
+                        </div>
+
+                        <div class="gender-input">
+                            <input type="radio" id="none" name="gender">
+                            <label for="none">Prefiro não dizer</label>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="continue-button">
+                    <button><a href="#">Salvar</a></button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    </div>
+        
+</body>
+
+</html>

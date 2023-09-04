@@ -1,0 +1,488 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;300;400;500;600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    border-radius: 5px;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e5e5e5;
+}
+
+.inicio{
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    flex-grow: 1;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.primeira-barra{
+    --tw-bg-opacity: 1;
+    background-color: rgb(187 247 208/var(--tw-bg-opacity));
+    align-items: center;
+    border-radius: 0.375rem;
+    display: flex;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    margin: 1rem auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.img img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 1rem 0;
+}
+
+.barra-logado{
+    --tw-text-opacity: 1;
+    color: rgb(22 101 52/var(--tw-text-opacity));
+}
+
+.barra-home{
+    padding-left: 0;
+    padding-right: 0;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.primary-link{
+    --tw-text-opacity: 1;
+    color: rgb(97 51 135/var(--tw-text-opacity));
+    font-family: OpenSans;
+    font-weight: 600;
+    text-decoration: inherit;
+}
+
+.page-center{
+    padding: 1.5rem;
+    background-color: white;
+}
+
+.title{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.title > h1{
+    --tw-text-opacity: 1;
+    color: rgb(97 51 135/var(--tw-text-opacity));
+    font-size: 1.45rem;
+    justify-content: center;
+    line-height: 1.75rem;
+    margin-bottom: 0.75rem;
+    font-family: PatuaOne;
+    font-weight: 550;
+    letter-spacing: .05em;
+    margin: 0;
+}
+
+.title > p{
+    --tw-text-opacity: 1;
+    color: rgb(75 85 99/var(--tw-text-opacity));
+    margin: 0;
+}
+
+.segunda-tela{
+    padding: 30px;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 45rem;
+}
+
+.linhas{
+    margin-bottom: 2.5rem;
+    margin-top: 2.5rem;
+    position: relative;
+    align-items: center;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 45rem;
+}
+
+.area{
+    align-items: center;
+    display: flex;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    position: absolute;
+}
+
+.identificacao{
+    justify-content: center;
+    display: flex;
+    position: relative;
+}
+
+.palavra-identificacao{
+    --tw-text-opacity: 1;
+    color: rgb(156 163 175/var(--tw-text-opacity));
+    letter-spacing: .025em;
+    font-size: 17px;
+    line-height: 1.25rem;
+    font-family: PatuaOne;
+    padding-left: 320px;
+    padding-right: 300px;
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255/var(--tw-bg-opacity));
+}
+
+.nome-bichinho{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.25rem;
+}
+
+.nome-bichinho > label{
+    --tw-text-opacity: 1;
+    color: rgb(55 65 81/var(--tw-text-opacity));
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+}
+
+#pet-form_name{
+    --tw-border-opacity: 1;
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255/var(--tw-bg-opacity));
+    border-color: rgb(209 213 219/var(--tw-border-opacity));
+    border-radius: 0.375rem;
+    border-width: 1px;
+    margin-top: 0.25rem;
+    padding: 0.5rem;
+    color: inherit;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: inherit;
+    margin: 0;
+    width: 100%;
+}
+
+.especie-sexo{
+    flex-direction: row;
+    display: flex;
+}
+
+#especie{
+    width: 50%;
+    
+}
+
+.especiee{
+    --tw-text-opacity: 1;
+    color: rgb(55 65 81/var(--tw-text-opacity));
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 2.55rem;
+}
+
+.especie-sexo > select{
+    --tw-border-opacity: 1;
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255/var(--tw-bg-opacity));
+    border-color: rgb(209 213 219/var(--tw-border-opacity));
+    border-radius: 0.375rem;
+    border-width: 1px;
+    margin-top: 0.25rem;
+    padding: 0.5rem;
+    text-transform: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: inherit;
+    margin: 0;
+}
+
+#sexo{
+    width: 50%;
+}
+
+.sexoo{
+    --tw-text-opacity: 1;
+    color: rgb(55 65 81/var(--tw-text-opacity));
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 2.5rem;
+}
+
+.idade-porte{
+    flex-direction: row;
+    display: flex;
+}
+
+#idade{
+    width: 50%;
+}
+
+.idadee{
+    --tw-text-opacity: 1;
+    color: rgb(55 65 81/var(--tw-text-opacity));
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 2.5rem;
+}
+
+#porte{
+    width: 50%;
+}
+
+.portee{
+    --tw-text-opacity: 1;
+    color: rgb(55 65 81/var(--tw-text-opacity));
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 2.5rem;
+}
+
+.idade-porte > select{
+    --tw-border-opacity: 1;
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255/var(--tw-bg-opacity));
+    border-color: rgb(209 213 219/var(--tw-border-opacity));
+    border-radius: 0.375rem;
+    border-width: 1px;
+    margin-top: 0.25rem;
+    padding: 0.5rem;
+    text-transform: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: inherit;
+    margin: 0;
+}
+
+#estado{
+    width: 50%;
+}
+
+.estado-cidade{
+    flex-direction: row;
+    display: flex;
+}
+
+.estadoo{
+    --tw-text-opacity: 1;
+    color: rgb(55 65 81/var(--tw-text-opacity));
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 2.5rem;
+}
+
+.estado-cidade > select{
+    --tw-border-opacity: 1;
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255/var(--tw-bg-opacity));
+    border-color: rgb(209 213 219/var(--tw-border-opacity));
+    border-radius: 0.375rem;
+    border-width: 1px;
+    margin-top: 0.25rem;
+    padding: 0.5rem;
+    text-transform: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: inherit;
+    margin: 0;
+}
+
+#cidade{
+    width: 50%;
+}
+
+.cidadee{
+    --tw-text-opacity: 1;
+    color: rgb(55 65 81/var(--tw-text-opacity));
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 2.5rem;
+}
+
+.sobre-bicho{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.25rem;
+}
+
+.sobre-bichoo{
+    --tw-text-opacity: 1;
+    color: rgb(55 65 81/var(--tw-text-opacity));
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+}
+
+.barra-outras-informacoes{
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+    position: relative;
+}
+
+.barra{
+    align-items: center;
+    display: flex;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    position: absolute;
+}
+
+.linha{
+    --tw-border-opacity: 1;
+    border-color: rgb(209 213 219/var(--tw-border-opacity));
+    border-top-width: 1px;
+    width: 100%;
+}
+
+.classe-informacoes{
+    justify-content: center;
+    display: flex;
+    position: relative;
+}
+
+.escolher-ficheiro-completo > input{
+    border: none;
+    background-color: rgb(235, 234, 234);
+    padding: 5px;
+}
+
+.frase-outras-informacoes{
+    --tw-text-opacity: 1;
+    color: rgb(156 163 175/var(--tw-text-opacity));
+    letter-spacing: .025em;
+    font-size: 17px;
+    line-height: 1.25rem;
+    font-family: PatuaOne;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255/var(--tw-bg-opacity));
+}
+
+.tabela-pai{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.25rem;
+}
+
+.tabela-pai > label{
+    --tw-text-opacity: 1;
+    color: rgb(55 65 81/var(--tw-text-opacity));
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+}
+
+.tabela{
+    flex-wrap: wrap;
+    display: flex;
+    margin-top: 0.75rem;
+}
+
+.chk-chip{
+    display: flex;
+    margin: 0.25rem;
+}
+
+.tabela-pai > input{
+    display: none;
+    --tw-border-opacity: 1;
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255/var(--tw-bg-opacity));
+    border-color: rgb(209 213 219/var(--tw-border-opacity));
+    border-radius: 0.375rem;
+    border-width: 1px;
+    margin-top: 0.25rem;
+    padding: 0.5rem;
+    color: inherit;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: inherit;
+    margin: 0;
+}
+
+.chk-chip > input + label{
+    --tw-bg-opacity: 1;
+    transition-duration: .5s;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(235, 234, 234);
+    padding: 5px;
+    cursor: pointer;
+}
+
+.continue-button button{
+    width: 100%;
+    margin-top: 2.5rem;
+    border: none;
+    background-color: rgb(66, 69, 240);
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.continue-button button:hover{
+    opacity: .5;
+}
+
+.continue-button button a{
+    text-decoration: none;
+    font-size: 0.93rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+
+
+
+
+.principal-completo{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.escolher-ficheiro-completo{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.25rem;
+}
+
+.pet-form_avatar{
+    --tw-text-opacity: 1;
+    color: rgb(55 65 81/var(--tw-text-opacity));
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+}
+
+.imagem-link{
+    border-radius: 0.5rem;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    vertical-align: middle;
+    padding: 3px;
+}
