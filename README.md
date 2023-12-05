@@ -2,7 +2,7 @@
 <h2 align="center">Site Amigos dos Pets</h2>
 
 # Nome do projeto: Amigos dos Pets
-# Desenvolvedores: Renivaldo Baessa de Oliveira, Rafael Cambito Maciel e Jesus Sifontes
+## Desenvolvedores: Renivaldo Baessa de Oliveira, Rafael Cambito Maciel e Jesus Sifontes
 ## Repositório do projeto integrador, onde foi utilizado metodologias estudadas durante o curso de TADS do IFPR - Campus Cascavel.
 
 ## Terminal:
