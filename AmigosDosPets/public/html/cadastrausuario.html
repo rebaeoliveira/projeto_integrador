@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/testecadbd.css">
+    <title>Cadastro de Usuário</title>
+</head>
+<body>
+    <h1>Cadastro de Usuário</h1>
+    <form id="userForm" method="post" action="/cadastrausuario">
+        <label for="nome">Nome completo:</label>
+        <input type="text" id="nome" name="nome" required><br>
+
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" name="cpf" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        <small>Coloque um e-mail ativo, pois você irá receber as mensagens do protetor ou adotante através dele.</small>
+        <small>Seu e-mail será exibido publicamente para que os interessados em adotar entrem em contato através dele.</small>
+
+        <label for="whatsapp">WhatsApp:</label>
+        <input type="text" id="whatsapp" name="whatsapp" required><br>
+        <small>Informe aqui o número de seu WhatsApp. Caso não tenha, informe seu contato de telefone no campo abaixo.</small>
+
+        <label for="telefone_secundario">Telefone Secundário:</label>
+        <input type="text" id="telefone_secundario" name="telefone_secundario"><br>
+        
+        <label for="endereco_user">Endereço:</label>
+        <input type="text" id="endereco" name="endereco"><br>
+        <small>Informe aqui o nome da rua, número da residência, complemento e bairro. </small>
+
+        <label for="estado">Estado:</label>
+        <select id="estado" name="estado">
+            <option value="PR">Paraná</option>
+        </select>
+
+        <label for="cidade">Cidade:</label>
+        <select id="cidade" name="cidade">
+            <option value="Cascavel">Cascavel</option>
+            <option value="Toledo">Toledo</option>
+            <option value="Santa Tereza do Oeste">Santa Tereza do Oeste</option>
+        </select>
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required><br>
+
+        <label for="genero">Gênero:</label>
+        <select id="genero" name="genero">
+            <option value="feminino">Feminino</option>
+            <option value="masculino">Masculino</option>
+            <option value="outros">Outros</option>
+            <option value="prefiro_nao_dizer">Prefiro não dizer</option>
+        </select><br>
+
+        <button type="submit">Cadastrar</button>
+    </form>
+</body>
+</html>

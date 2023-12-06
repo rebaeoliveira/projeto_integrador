@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/petperdido.css">
+    <title>Pet perdido </title>
+</head>
+<body>
+    <h1>Informe os dados do Pet e marque o checkbox PET PERDIDO</h1>
+    <form id="petForm" method="post" action="/petperdido">
+        <label for="nome_pet">Nome do Pet:</label>
+        <input type="text" id="nome_pet" name="nome_pet" required><br>
+
+        <!-- comenado aqui com teste para pegar o ID do usuário logado
+        <label for="user_id">ID do Tutor (usuário):</label>
+        <input type="text" id="user_id" name="user_id" value="informar ID do user" required><br>-->
+
+        <label for="especie_pet">Espécie do Pet</label>
+        <select id="especie_pet" name="especie_pet">
+            <option value="cachorro">Cachorro</option>
+            <option value="gato">Gato</option>
+        </select><br>
+
+        <label for="sexo_pet">Sexo do Pet:</label>
+        <select id="sexo_pet" name="sexo_pet">
+            <option value="macho">Macho</option>
+            <option value="femea">Fêmea</option>
+        </select><br>
+
+        <label for="idade_pet">Idade do Pet:</label>
+        <select id="idade_pet" name="idade_pet">
+            <option value="filhote">Filhote</option>           
+            <option value="adulto">Adulto</option>
+            <option value="idoso">Idoso</option>
+        </select><br>
+
+        <label for="porte_pet">Porte do Pet:</label>
+        <select id="porte_pet" name="porte_pet">
+            <option value="pequeno">Porte pequeno</option>
+            <option value="medio">Porte médio</option>
+            <option value="grande">Porte grande</option>
+        </select><br>
+
+        <label for="foto_pet">Foto do Pet:</label>
+        <input type="file" id="foto_pet" name="foto_pet" accept="image/*" required><br>
+
+        <label for="sobre_pet">Informa aqui detalhes como data, local e horário em que o pet foi perdido:</label>
+        <textarea id="sobre_pet" name="sobre_pet" required></textarea><br>
+
+        <label for="perdido">Pet Perdido?</label>
+        <input type="checkbox" id="perdido" name="perdido" value="S">
+
+        <label for="disponivel_doacao">Disponível para Doação?</label>
+        <input type="checkbox" id="disponivel_doacao" name="disponivel_doacao" value="S">
+
+        <p></p>
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const disponivelDoacaoCheckbox = document.getElementById("disponivel_doacao");
+            const perdidoCheckbox = document.getElementById("perdido");
+        
+            disponivelDoacaoCheckbox.addEventListener("change", function () {
+                if (this.checked) {
+                    // Se Disponível para Adoção foi marcado, desabilite Pet Perdido
+                    perdidoCheckbox.disabled = true;
+                } else {
+                    // Se Disponível para Adoção foi desmarcado, habilite Pet Perdido
+                    perdidoCheckbox.disabled = false;
+                }
+            });
+        
+            perdidoCheckbox.addEventListener("change", function () {
+                if (this.checked) {
+                    // Se Pet Perdido foi marcado, desabilite Disponível para Adoção
+                    disponivelDoacaoCheckbox.disabled = true;
+                } else {
+                    // Se Pet Perdido foi desmarcado, habilite Disponível para Adoção
+                    disponivelDoacaoCheckbox.disabled = false;
+                }
+            });
+        });
+        </script>
+        
+
+</body>
+</html>

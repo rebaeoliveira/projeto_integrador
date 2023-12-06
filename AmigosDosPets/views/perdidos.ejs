@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets Perdidos</title>
+    <link rel="stylesheet" href="/css/perdidos.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Pets Perdidos</h1>
+            <a href="/" class="back-button">Página Inicial</a>
+        </div>
+    </header>
+    <main>
+        <section class="search-form">
+            <h2>Preencha os filtros para buscar pets perdidos</h2>
+            <form method="post" action="/perdidos">
+                <div class="filter">
+                    <label for="especie">Espécie:</label>
+                    <select id="especie" name="especie">
+                        <option value="">Todas as espécies</option>
+                        <option value="cachorro">Cachorro</option>
+                        <option value="gato">Gato</option>
+                    </select>
+                </div>
+
+                <div class="filter">
+                    <label for="sexo">Sexo:</label>
+                    <select id="sexo" name="sexo">
+                        <option value="">Todos os sexos</option>
+                        <option value="macho">Macho</option>
+                        <option value="femea">Fêmea</option>
+                    </select>
+                </div>
+
+                <div class="filter">
+                    <label for="porte">Porte:</label>
+                    <select id="porte" name="porte">
+                        <option value="">Todos os portes</option>
+                        <option value="pequeno">Pequeno</option>
+                        <option value="medio">Médio</option>
+                        <option value="grande">Grande</option>
+                    </select>
+                </div>
+
+                <button type="submit">Buscar</button>
+            </form>
+        </section>
+
+        <section class="search-results">
+            <% if (resultados && resultados.length > 0) { %>
+                <ul>
+                    <% resultados.forEach(pets => { %>
+                        <li>
+                            <div class="pet-card">  <% console.log('Caminho da imagem:', `/image/${pets.foto_pet}`); %>
+                                <img src="https://source.unsplash.com/250x250/?cat" alt="Imagem do Animal">                       
+                                <h3><%= pets.nome_pet %></h3>
+                                <p>Espécie: <%= pets.especie_pet %></p>
+                                <p>Sexo: <%= pets.sexo_pet %></p>
+                                <p>Porte: <%= pets.porte_pet %></p>
+                                <p>Sobre o Pet: <%= pets.sobre_pet %></p>
+                                <% if (pets.User) { %>
+                                    <p>Nome Tutor: <%= pets.User.nome %></p>
+                                    <p>E-mail Tutor: <a href="mailto:<%= pets.User.email %>?subject=Interesse na adoção do animal"><%= pets.User.email %></a></p>
+                                    <p>Contato Tutor: <a href="https://wa.me/<%= pets.User.whatsapp %>" target="_blank" class="whatsapp-link"><%= pets.User.whatsapp %></a></p>
+                                <% } else { %>
+                                    <p>Dados do Tutor não disponíveis</p>
+                                <% } %>
+                            </div>
+                        </li>
+                    <% }); %>                   
+                </ul>
+            <% } else { %>
+                <p>Nenhum animal perdido encontrado.</p>
+            <% } %>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Amigos dos Pets. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

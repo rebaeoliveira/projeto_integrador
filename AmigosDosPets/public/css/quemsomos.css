@@ -1,0 +1,70 @@
+/* Estilo do corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 4px;
+    text-align: center;
+    position: relative; /* Adicionado para posicionar o link de Página Inicial */
+}
+
+/* Estilo do link Página Inicial */
+header a {
+    color: #fff;
+    text-decoration: none;
+    position: absolute;
+    top: 50%; /* Ajusta verticalmente ao centro do cabeçalho */
+    right: 30px; /* Ajusta horizontalmente ao lado direito */
+    transform: translateY(-50%); /* Centraliza verticalmente */
+}
+
+/* Estilo do conteúdo principal */
+main {
+    max-width: 900px;
+    margin: 4px auto;
+    padding: 2px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.904);
+    text-align: justify;
+}
+
+/* Estilo das seções */
+section {
+    margin-bottom: 10px;
+    text-align: justify;
+    margin-left: 20px; /* Adiciona margem à esquerda */
+    margin-right: 20px;
+}
+
+section h2 {
+    color: #030000;
+}
+
+#imagem {
+    text-align: center;
+    margin-top: 10px; /* Ajustado para um espaçamento maior entre a seção anterior e a imagem */
+}
+
+#imagem img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto; /* Ajuste conforme necessário para centralizar a imagem e dar espaço ao redor */
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}

@@ -1,0 +1,80 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.qrcode-header {
+    background-color: #333; /* Cor de fundo para o cabeçalho */
+    color: #fff; /* Cor do texto */
+    padding: 10px; /* Espaçamento interno */
+    display: flex; /* Usa um layout flexível */
+    justify-content: space-between; /* Espaço entre os itens (à esquerda e à direita) */
+    align-items: center; /* Alinha verticalmente ao centro */
+    width: 100%; /* Ocupa 100% da largura */
+    position: fixed; /* Fixa o cabeçalho no topo da janela de visualização */
+    top: 0; /* Alinha o cabeçalho no topo */
+    z-index: 1000; /* Garante que o cabeçalho esteja acima de outros elementos */
+}
+
+
+.qrcode-header h1 {
+    margin: 0;
+}
+
+.qrcode-header a {
+    color: #fff;
+    text-decoration: none;
+    padding: 50px;
+}
+
+.qrcode-container {
+    /* Adicione estilos conforme necessário para o container do QRCode */
+    margin-top: 10px; /* Ajuste conforme necessário para centralizar na página */
+}
+
+img {
+    border: 10px solid #fff;
+    border-radius: 44%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+button {
+    margin: 10px 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+button:nth-child(1) {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+button:nth-child(2) {
+    background-color: #008CBA;
+    color: #fff;
+}
+
+.qrcode-footer {
+    position: fixed; /* Fixa o rodapé na parte inferior da janela de visualização */
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    bottom: 0; /* Alinha o rodapé na parte inferior */
+    left: 0; /* Alinha o rodapé à esquerda */
+    width: 100%; /* Ocupa 100% da largura */
+}

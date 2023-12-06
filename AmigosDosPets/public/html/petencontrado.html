@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/petencontrado.css">
+    <title>Cadastro de Pet Encontrado</title>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Cadastro de Pet Encontrado</h1>
+            <p>É necessário cadastrar-se no site para anunciar o pet encontrado? <a href="/cadastrausuario">Cadastre-se</a></p>
+            <p>Já é cadastrado? <a href="/login">Faça o login</a></p>
+        </div>
+    </header>
+    <form id="petEncontradoForm" method="post" action="/petencontrado" enctype="multipart/form-data">
+        <label for="especie_encontrado">Espécie do Animal:</label>
+        <select id="especie_encontrado" name="especie_encontrado" required>
+            <option value="Cachorro">Cachorro</option>
+            <option value="Gato">Gato</option>
+        </select><br>
+
+        <label for="data_encontrado">Data em que Encontrou:</label>
+        <input type="date" id="data_encontrado" name="data_encontrado" required><br>
+
+        <label for="cidade_encontrado">Cidade onde Encontrou:</label>
+        <select id="cidade_encontrado" name="cidade_encontrado">
+            <option value="Cascavel" selected>Cascavel</option>
+        </select><br>
+
+        <label for="local_encontrado">Local onde Encontrou:</label>
+        <input type="text" id="local_encontrado" name="local_encontrado"><br>
+
+        <label for="detalhes_encontrado">Detalhes sobre o Animal Encontrado:</label>
+        <textarea id="detalhes_encontrado" name="detalhes_encontrado"></textarea><br>
+
+        <label for="foto_encontrado">Foto do Animal Encontrado:</label>
+        <input type="file" id="foto_encontrado" name="foto_encontrado" accept="image/*" required><br>
+
+        <!-- O campo "situacao_encontrado" é definido automaticamente como "S" (Sim) -->
+        <input type="hidden" id="situacao_encontrado" name="situacao_encontrado" value="S">
+
+        <button type="submit">Anunciar Pet Encontrado</button>
+    </form>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // O campo "situacao_encontrado" é definido automaticamente como "S" (Sim)
+            document.getElementById("situacao_encontrado").value = "S";
+        });
+    </script>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 Amigos dos Pets. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

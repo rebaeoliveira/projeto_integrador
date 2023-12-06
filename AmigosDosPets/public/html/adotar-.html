@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/adotar.css">
+    <title>Adotar um Pet</title>
+</head>
+<body>
+    <header>
+        <h1>Adotar um Pet</h1>
+    </header>
+
+    <main>
+        <section class="search-form">
+            <h2>Encontre seu novo amigo</h2>
+            <form>
+                <div class="filter">
+                    <label for="especie">Espécie:</label>
+                    <select id="especie" name="especie">
+                        <option value="">Todas as espécies</option>
+                        <option value="cachorro">Cachorro</option>
+                        <option value="gato">Gato</option>
+                    </select>
+                </div>
+
+                <div class="filter">
+                    <label for="sexo">Sexo:</label>
+                    <select id="sexo" name="sexo">
+                        <option value="">Todos os sexos</option>
+                        <option value="macho">Macho</option>
+                        <option value="femea">Fêmea</option>
+                    </select>
+                </div>
+
+                <div class="filter">
+                    <label for="porte">Porte:</label>
+                    <select id="porte" name="porte">
+                        <option value="">Todos os portes</option>
+                        <option value="pequeno">Pequeno</option>
+                        <option value="medio">Médio</option>
+                        <option value="grande">Grande</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="btnBuscar">Buscar</button>
+            </form>
+        </section>
+
+        <section class="search-results">
+            <!-- Aqui serão exibidos os resultados da pesquisa -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Adotar um Pet</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('DOM carregado');
+    
+            const btnBuscar = document.getElementById('btnBuscar');
+    
+            btnBuscar.addEventListener('click', function (event) {
+                event.preventDefault();
+                console.log('Botão Buscar clicado');
+    
+                // Obtenha os dados do formulário
+                const form = document.querySelector('form');
+                const formData = new FormData(form);
+    
+                // Faça a solicitação AJAX usando Fetch
+                fetch('/adotar', {
+                    method: 'POST',
+                    body: formData,
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Dados recebidos do servidor:', data);
+                    // Adicione aqui o código para manipular os resultados recebidos do servidor
+                })
+                .catch(error => console.error('Erro na solicitação AJAX:', error));
+            });
+        });
+    </script>
+    
+    
+</body>
+</html>

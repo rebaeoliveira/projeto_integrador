@@ -1,0 +1,100 @@
+
+Neste exemplo, criamos um formulário HTML com os campos especificados e um botão "Cadastrar". 
+O atributo action no elemento form é definido como "/cadastrar", que será o caminho para a rota no Node.js que receberá os dados do formulário.
+
+Node.js (app.js):
+
+===================================
+const express = require('express');
+const bodyParser = require('body-parser');
+const Sequelize = require('sequelize');
+
+const app = express();
+const port = 3000;
+
+// Configurar o body-parser para analisar dados do formulário
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+// Configurar a conexão com o banco de dados MySQL
+const sequelize = new Sequelize("amigosdospets", "seu_usuario_mysql", "sua_senha_mysql", {
+    host: 'localhost',
+    dialect: 'mysql',
+    port: 3306 // A porta MySQL que você está usando
+});
+
+// Definir um modelo para a tabela de Usuários
+const User = sequelize.define('User', {
+    nome: Sequelize.STRING,
+    cpf: Sequelize.STRING,
+    email: Sequelize.STRING,
+    whatsapp: Sequelize.STRING,
+    telefone_secundario: Sequelize.STRING,
+    endereco: Sequelize.STRING,
+    estado: Sequelize.STRING,
+    cidade: Sequelize.STRING,
+    senha: Sequelize.STRING,
+    genero: Sequelize.STRING
+});
+
+// Sincronizar o modelo com o banco de dados (cria a tabela se não existir)
+sequelize.sync().then(() => {
+    console.log('Tabela de Usuários criada ou sincronizada com sucesso.');
+}).catch(err => {
+    console.error('Erro ao sincronizar a tabela de Usuários:', err);
+});
+
+// Rota para exibir o formulário de cadastro
+app.get('/cadastro', (req, res) => {
+    res.sendFile(__dirname + '/cadastro.html');
+});
+
+// Rota para receber os dados do formulário e cadastrá-los no banco de dados
+app.post('/cadastrar', (req, res) => {
+    const {
+        nome,
+        cpf,
+        email,
+        whatsapp,
+        telefone_secundario,
+        endereco,
+        estado,
+        cidade,
+        senha,
+        genero
+    } = req.body;
+
+    // Inserir os dados no banco de dados
+    User.create({
+        nome,
+        cpf,
+        email,
+        whatsapp,
+        telefone_secundario,
+        endereco,
+        estado,
+        cidade,
+        senha,
+        genero
+    }).then(user => {
+        console.log('Usuário cadastrado com sucesso:', user.toJSON());
+        res.send('Cadastro realizado com sucesso!');
+    }).catch(err => {
+        console.error('Erro ao cadastrar usuário:', err);
+        res.status(500).send('Erro ao cadastrar usuário.');
+    });
+});
+
+app.listen(port, () => {
+    console.log(`Servidor em execução na porta ${port}`);
+});
+
+=========================
+
+Este código Node.js define rotas para exibir o formulário de cadastro (/cadastro) e para receber os dados do formulário (/cadastrar). 
+Quando o formulário é preenchido e enviado, os dados são inseridos na tabela "User" no banco de dados MySQL.
+
+Lembre-se de atualizar as informações de conexão do banco de dados (nome de usuário, senha, host e porta) de acordo com a configuração do seu ambiente MySQL.
+
+Este é um exemplo básico e pode ser aprimorado com validação de dados e medidas de segurança adicionais, dependendo das suas necessidades. 
+Certifique-se de tratar os dados de forma adequada e segura.

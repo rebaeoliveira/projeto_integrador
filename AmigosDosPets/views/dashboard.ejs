@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <!-- Adicione links para folhas de estilo ou bibliotecas JavaScript adicionais, se necessário -->
+</head>
+<body>
+    <div id="success-message" class="success-message">
+        <!-- O conteúdo da mensagem de sucesso será inserido aqui -->
+        <%= successMessage %>
+    </div>
+
+    <header class="dashboard-header">
+        <h1>Olá, <%= user.nome %></h1>
+        <nav>
+            <ul>
+                <li><a href="/">Página Inicial</a></li>
+                <li><a href="/logout">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="dashboard-content">
+        <section class="account-details">
+            <h2>Detalhes da Conta</h2>
+            <p>Nome: <%= user.nome %></p>
+            <p>E-mail: <%= user.email %></p>
+            <!-- Adicionar outras informações de contato conforme necessário -->
+        </section>
+    </section>
+
+    <section class="add-pet-section">
+        <a href="/cadastropet" class="button">Cadastrar Meu Pet</a>
+    </section>
+
+    <section class="pet-list">
+        <h2>Seus Animais de Estimação</h2>
+        <ul>
+            <% pets.forEach((pet, index) => { %>
+                <li>
+                    <div class="pet-card">
+                        <img src="/<%= pet.foto_pet %>" alt="Imagem do Animal">
+                        <h3><%= pet.nome_pet %></h3>
+                        <p>Espécie: <%= pet.especie_pet %></p>
+                        <button onclick="openQRCodePage('<%= pet.nome_pet %>', '<%= user.nome %>', '<%= user.email %>', '<%= user.whatsapp %>')">QRCode</button>
+                    </div>
+                </li>
+            <% }); %>
+        </ul>
+    </section>
+
+    <footer class="dashboard-footer">
+        <p>&copy; 2023 Amigos dos Pets. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- JavaScript para ocultar a mensagem de sucesso após alguns segundos -->
+    <script>
+        setTimeout(function () {
+            var successMessage = document.getElementById('success-message');
+            if (successMessage) {
+                successMessage.style.display = 'none';
+            }
+        }, 5000); // A mensagem de sucesso será ocultada após 5 segundos (ajuste conforme necessário)
+    </script>
+
+    <script>
+        function openQRCodePage(nomePet, nomeTutor, emailTutor, telefoneTutor) {
+            const qrCodeText = `Nome: ${nomePet}, Tutor: ${nomeTutor}, E-mail: ${emailTutor}, Telefone: ${telefoneTutor}`;
+            const qrCodeData = encodeURIComponent(qrCodeText);
+            const qrCodeUrl = `/qrcode?data=${qrCodeData}`;
+            window.open(qrCodeUrl, '_blank');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+/* Arquivo dashboard.css */
+
+/* Estilo do corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/* Estilo do cabeçalho */
+.dashboard-header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard-header h1 {
+    margin: 0;
+}
+
+.dashboard-header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dashboard-header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.dashboard-header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Estilo do conteúdo principal */
+.dashboard-content {
+    padding: 20px;
+}
+
+/* Estilo dos detalhes da conta */
+.account-details {
+    background-color: #aafc96;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.account-details h2 {
+    margin-top: 0;
+}
+
+/* Estilo da lista de animais de estimação */
+.pet-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1600px; /* Define uma largura máxima para o contêiner da lista de pets */
+}
+
+.pet-list ul li {
+    flex: 0 0 calc(23% - 10px); /* Define o tamanho das colunas (25% para 4 colunas em uma linha) */
+    margin-right: 20px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.pet-card {
+    position: relative;
+    height: 300px; /* Defina a altura desejada para os cards */
+}
+
+.pet-card img {
+    width: 100%; /* Define a largura da imagem como 100% do contêiner */
+    height: 60%; /* Define a altura da imagem como 100% do contêiner */
+    object-fit: cover; /* Mantém a proporção da imagem e a corta para caber no contêiner */
+    border-radius: 5px 5px 0 0; /* Arredonda apenas a parte superior da imagem */
+}
+
+.pet-card h3 {
+    margin: 10px 0;
+}
+
+.pet-card button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pet-card button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo do botão "Cadastrar Meu Pet" */
+.account-details a.button {
+    display: inline-block; /* Adiciona display inline-block para permitir ajustes de largura e altura */
+    background-color: #007bff;
+    color: #fff;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    padding: 12px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.account-details a.button:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Estilo do rodapé */
+.dashboard-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+}
+
+/* Estilo para a mensagem de sucesso */
+.success-message {
+    background-color: #4570fc; /* Cor de fundo verde */
+    color: #fff; /* Cor do texto branco */
+    padding: 10px 20px; /* Espaçamento interno para a mensagem */
+    text-align: center; /* Alinhamento centralizado do texto */
+    position: fixed; /* Fixa a mensagem na parte superior da tela */
+    top: 0; /* A mensagem fica no topo da tela */
+    left: 0; /* A mensagem fica à esquerda da tela */
+    width: 100%; /* Largura total */
+    z-index: 9999; /* Aumenta a prioridade sobre outros elementos */
+    display: block; /* Altere "none" para "block" ou outra propriedade de exibição desejada */
+}
+
+
+.add-pet-section {
+    text-align: left; /* Centraliza o conteúdo na horizontal */
+    margin-top: 20px; /* Adiciona algum espaçamento superior */
+    padding: 1%;
+}
+
+.add-pet-section a.button {
+    background-color: #007bff;
+    color: #fff;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    padding: 12px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.add-pet-section a.button:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}

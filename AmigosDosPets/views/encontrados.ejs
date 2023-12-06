@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets Encontrados</title>
+    <link rel="stylesheet" href="/css/encontrados.css"> <!-- Certifique-se de ter um arquivo CSS adequado -->
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Pets Encontrados</h1>
+            <a href="/" class="back-button">Página Inicial</a>
+        </div>
+    </header>
+    <main>
+        <section class="search-form">
+            <h2>Preencha os filtros para buscar pets encontrados</h2>
+            <form method="post" action="/encontrados"> <!-- Certifique-se de usar a rota correta -->
+                <div class="filter">
+                    <label for="especie">Espécie:</label>
+                    <select id="especie" name="especie">
+                        <option value="">Todas as espécies</option>
+                        <option value="cachorro">Cachorro</option>
+                        <option value="gato">Gato</option>
+                    </select>
+                </div>
+
+                <!-- Adicione outros filtros conforme necessário -->
+
+                <button type="submit">Buscar</button>
+            </form>
+        </section>
+
+        <section class="search-results">
+            <% if (resultados && resultados.length > 0) { %>
+                <ul>
+                    <% resultados.forEach(petencontrado => { %>
+                        <li>
+                            <div class="pet-card">
+                                <!-- Certifique-se de ajustar o caminho da imagem conforme necessário -->
+                                <img src="https://source.unsplash.com/250x250/?dog" alt="Imagem do Animal">
+                                <h3><%= petencontrado.nome_pet %></h3>
+                                <p>Espécie: <%= petencontrado.especie_encontrado %></p>
+                                <p>Data encontrado: <%= petencontrado.data_encontrado %></p>
+                                <p>Cidade: <%= petencontrado.cidade_encontrado %></p>
+                                <p>Local: <%= petencontrado.local_encontrado %></p>
+                                <p>Detalhes: <%= petencontrado.detalhes_encontrado %></p>
+                                
+                                <!-- Adicione as informações do usuário -->
+                                <p>Quem encontrou: <%= petencontrado.User.nome %></p>
+                                <p>Email: <a href="mailto:<%= petencontrado.User.email %>"><%= petencontrado.User.email %></a></p>
+                                <p>Telefone: <a href="https://wa.me/<%= petencontrado.User.whatsapp %>" target="_blank" class="whatsapp-link"><%= petencontrado.User.whatsapp %></a></p>
+                            </div>
+                        </li>
+                    <% }); %>                   
+                </ul>
+            <% } else { %>
+                <p>Nenhum animal encontrado.</p>
+            <% } %>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Amigos dos Pets. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,7 @@
+npm install ejs --save
+
+ npm instal ejs
+
+ npm install express-mysql-session
+
+npm install express-session --save

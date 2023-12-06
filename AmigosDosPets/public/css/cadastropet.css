@@ -1,0 +1,72 @@
+/* Estilos para o formulário de cadastro de pet */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 16px;
+    color: black;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-top: 5px;
+    font-weight: bold;
+    color:black;
+}
+
+form input[type="text"],
+form select,
+form textarea,
+form input[type="file"],
+form input[type="checkbox"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 3px;
+    border: 1.5px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+form select {
+    height: 34px;
+}
+
+form textarea {
+    height: 90px;
+}
+
+form input[type="checkbox"] {
+    width: auto;
+    margin-top: 10px;
+}
+
+button[type="submit"] {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+

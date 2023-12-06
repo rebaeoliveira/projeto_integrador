@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QRCode</title>
+    <link rel="stylesheet" href="/css/qrcode.css">
+</head>
+<body>
+
+    <header class="qrcode-header">
+        <h1>Gerador de QRCode</h1>
+        <li><a href="/">Página Inicial</a></li>
+    </header>
+
+    <div class="qrcode-container">
+        <img src="<%= qrCodeImageUrl %>" alt="QRCode">
+    </div>
+    
+    <div class="buttons-container">
+        <button onclick="goBack()">Voltar para o Dashboard</button>
+        <button onclick="printQRCode()">Imprimir</button>
+    </div>
+
+    <script>
+        function goBack() {
+            window.close(); // Fecha a guia atual
+        }
+
+        function printQRCode() {
+            window.print();
+        }
+    </script>
+
+    <footer class="qrcode-footer">
+    <p>&copy; 2023 Amigos dos Pets. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+/* Reset de estilos para normalizar o layout */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o conteúdo mínimo ocupe toda a altura da tela */
+}
+
+header, main, footer {
+    margin: 20px;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.back-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.back-button:hover {
+    background-color: #555;
+}
+
+
+h1 {
+    font-size: 1.5em;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1; /* Permite que o conteúdo principal cresça para preencher o espaço disponível */
+}
+
+.search-form, .search-results {
+    width: 48%;
+}
+
+.search-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter {
+    margin-bottom: 10px;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+select, button {
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+.search-results ul {
+    list-style: none;
+}
+
+.search-results li {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+/* Estilo para o link de WhatsApp */
+a.whatsapp-link {
+    display: inline-block;
+    padding: 4px;
+    background-color: #4CAF50; /* Cor verde de exemplo, você pode ajustar conforme necessário */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+/* Estilo para alterar a cor do link quando passar o mouse */
+a.whatsapp-link:hover {
+    background-color: #45a049; /* Cor verde mais escura quando passar o mouse */
+}

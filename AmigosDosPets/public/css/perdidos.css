@@ -1,0 +1,95 @@
+/* Estilo dos cards dos Pets Perdidos */
+.pet-card {
+    width: 300px;
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.pet-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: left;
+    position: relative;
+}
+
+/* Estilo do link Página Inicial */
+header a {
+    color: #fff;
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.search-results ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; /* Permite que os cards quebrem para a próxima linha */
+}
+
+.search-results ul li {
+    flex: 0 0 calc(33.33% - 20px); /* Define o tamanho das colunas (33.33% para 3 colunas em uma linha) com margem entre os cards */
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.search-results ul li .pet-card {
+    padding: 15px;
+}
+
+
+a.whatsapp-link {
+    display: inline-block;
+    padding: 4px;
+    background-color: #4CAF50; /* Cor verde de exemplo, você pode ajustar conforme necessário */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+/* Estilo para alterar a cor do link quando passar o mouse */
+a.whatsapp-link:hover {
+    background-color: #45a049; /* Cor verde mais escura quando passar o mouse */
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #555;
+}
